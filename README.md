@@ -8,9 +8,9 @@ Neste estudo, exercitamos a criação de páginas tipo "blog", utilizando vário
 
 ## Com isso, temos uma página:
 
-✅ Desenvolvida utilizando apenas HTML e CSS.
-✅ Com código semântico.
-✅ Design 100% responsivo.
+✅ Desenvolvida utilizando apenas HTML e CSS.<br>
+✅ Com código semântico.<br>
+✅ Design 100% responsivo.<br>
 ✅ Identidade Visual: O design foi criado em inspiração a identidade da banda
 
 ## Aprendizado
