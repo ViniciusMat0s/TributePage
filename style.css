@@ -1,0 +1,613 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    font-family: Fraunces;
+    scroll-behavior: smooth;
+}
+
+.nav-container {
+    display: flex;
+    height: 4rem;
+    background-color: #000000;
+    color: #ffffff;
+    border-bottom: #ff0000 0.3rem solid;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+}
+
+.menu {
+    display: flex;
+    gap: 5rem;
+    padding-top: 1.5rem;
+}
+
+.menu-item, .menu-item a{
+    cursor: pointer;
+    list-style: none;
+    transition: 0.5s;
+    color: white;
+    text-decoration: none;
+}
+
+.menu-item:hover, .menu-item a:hover{
+    color: #ffffff99;
+    transition: 0.5s;
+}
+
+.banner {
+    background-color: black;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: #ff0000 0.3rem solid;
+}
+
+.banner-bg {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+
+.banner-bg img {
+    width: 100%;
+    height: 100vh;
+    opacity: 50%;
+}
+
+.banner-front {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-front img {
+    height: 25rem;
+    width: auto;
+}
+
+.content {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+}
+
+.content h2 {
+    font-size: 1.5rem;
+    color: red
+}
+
+.about,
+.one,
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven {
+    width: 75%;
+    height: 50%;
+    padding: 2rem;
+}
+
+.albums {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #000;
+    padding: 2rem;
+}
+
+.album-card {
+    width: calc(33.33% - 2rem);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.album-main {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.album-main img {
+    width: 25rem;
+    height: 25rem;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.album-tracks {
+    height: 25rem;
+    width: auto;
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: white;
+    padding-top: 1rem;
+    opacity: 0;
+    transition: opacity 1s ease;
+    overflow-y: auto;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.album-main:hover .album-tracks {
+    opacity: 1;
+    transition: opacity 0.6s ease;
+}
+
+.album-tracks h2 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.album-tracks ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.album-card h1 {
+    padding: 0.5rem;
+    color: red;
+}
+
+.album-card p {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    background: none;
+    padding: 0;
+    height: 160px;
+    overflow-y: auto;
+    text-align: center;
+}
+
+#mediator-text {
+    padding-top: 1.25rem;
+    font-size: 0.9rem;
+}
+
+.albuns-tracks,
+.title {
+    color: white;
+    background-color: black;
+    font-size: 2.5rem;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #000;
+    padding: 2rem;
+}
+
+.member-card {
+    width: calc(25% - 2rem);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+}
+
+.member-main {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.member-main img {
+    width: 20rem;
+    height: 20rem;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+.member-card h1 {
+    text-align: center;
+    padding: 0.5rem;
+    color: red;
+}
+
+.member-card p {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    background: none;
+    padding: 0;
+    height: 160px;
+    overflow-y: auto;
+    text-align: center;
+}
+
+.old-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #000;
+    padding: 2rem;
+}
+
+.old-member-card {
+    width: calc(25 - 2rem);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.old-member-card h1 {
+    padding: 0.5rem;
+    color: red;
+}
+
+.old-member-main img {
+    width: 15rem;
+    height: 15rem;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 992px) {
+
+    /* Reset básico para evitar overflow e espaçamentos indesejados */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+        background-color: black;
+        color: white;
+    }
+
+    /* Cartões de álbum e membros */
+    .album-card,
+    .member-card {
+        width: 48%;
+        text-align: center;
+        margin: 1rem 1%;
+    }
+
+    .album-main {
+        width: 100%;
+    }
+
+    .album-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        display: block;
+    }
+
+    .album-card p {
+        padding: 1rem;
+        font-size: 0.75rem;
+        line-height: auto;
+        text-align: left;
+        overflow-y: auto;
+        background: none;
+    }
+
+    /* Navegação */
+    .nav-container {
+        width: 100%;
+        height: auto;
+        background-color: #000000;
+        color: #ffffff;
+        border-bottom: #ff0000 0.3rem solid;
+        padding: 1rem 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu-item {
+        list-style: none;
+        cursor: pointer;
+        font-size: 1.1rem;
+        transition: 0.3s ease;
+        text-align: center;
+    }
+
+    .menu-item:hover {
+        color: #ffffff99;
+    }
+
+    .banner {
+        background-color: black;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-bottom: #ff0000 0.3rem solid;
+        position: relative;
+    }
+
+    .banner-bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        overflow: hidden;
+    }
+
+    .banner-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.5;
+        display: block;
+    }
+
+    .banner-front {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .banner-front img {
+        max-width: 90%;
+        height: auto;
+        display: block;
+    }
+
+    .content {
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        color: white;
+    }
+
+    .content h1 {
+        font-size: 3rem;
+    }
+
+    .content h2 {
+        font-size: 1.8rem;
+        color: red;
+    }
+
+    .about,
+    .one,
+    .two,
+    .three,
+    .four,
+    .five,
+    .six,
+    .seven {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .members {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: #000;
+        padding: 3.5rem;
+    }
+
+    .old-members {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: #000;
+    }
+
+    .old-member-card {
+        width: calc(50% - 7.5rem);
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    /* Reset básico para evitar overflow e espaçamentos indesejados */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+        background-color: black;
+        color: white;
+    }
+
+    /* Cartões de álbum e membros */
+    .album-card,
+    .member-card {
+        width: 100%;
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .album-main {
+        width: 100%;
+    }
+
+    .album-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        display: block;
+    }
+
+    .album-card p {
+        padding: 1rem;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        text-align: left;
+        overflow-y: auto;
+        background: none;
+    }
+
+    /* Navegação */
+    .nav-container {
+        width: 100%;
+        height: auto;
+        background-color: #000000;
+        color: #ffffff;
+        border-bottom: #ff0000 0.3rem solid;
+        padding: 1rem 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        /* agora lado a lado */
+        justify-content: center;
+        gap: 2rem;
+        width: 100%;
+        flex-wrap: wrap;
+        /* para quebrar se necessário */
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu-item {
+        list-style: none;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: 0.3s ease;
+        text-align: center;
+    }
+
+    .menu-item:hover {
+        color: #ffffff99;
+    }
+
+    .banner {
+        background-color: black;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-bottom: #ff0000 0.3rem solid;
+        position: relative;
+    }
+
+    .banner-bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        overflow: hidden;
+    }
+
+    .banner-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.5;
+        display: block;
+    }
+
+    .banner-front {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .banner-front img {
+        max-width: 90%;
+        height: auto;
+        display: block;
+    }
+
+    .content {
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        color: white;
+    }
+
+    .content h1 {
+        font-size: 2.5rem;
+    }
+
+    .content h2 {
+        font-size: 1.5rem;
+        color: red
+    }
+
+    .about,
+    .one,
+    .two,
+    .three,
+    .four,
+    .five,
+    .six,
+    .seven {
+        width: 100%;
+        height: 50%;
+        padding: 2rem;
+    }
+}
